@@ -1,1 +1,1 @@
-export { useForceUpdate } from './src/useForceUpdate';
+export { Publisher } from './src/publisher';
