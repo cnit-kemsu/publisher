@@ -1,6 +1,6 @@
 {
-  "name": "@implicit/publisher",
-  "scope": "@implicit",
+  "name": "@kemsu/publisher",
+  "scope": "@kemsu",
   "version": "0.1.0",
   "description": "",
   "author": "yo-yo",
