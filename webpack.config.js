@@ -1,14 +1,16 @@
-const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'inline-source-map',
+  mode: 'development',
   target: 'web',
-  entry: './test/app.js',
+
+  entry: './example/app.js',
+  
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: '[name].js',
   },
 
   module: {
@@ -16,16 +18,14 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: JSON.parse(fs.readFileSync('.babelrc'))
+        loader: 'babel-loader'
       }
     ]
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'publisher',
-      template: './test/index.html'
+      template: './example/index.html'
     })
   ],
 
